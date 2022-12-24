@@ -20,7 +20,6 @@ def handler(event, context):
         FunctionName=os.environ['DOWNSTREAM_FUNCTION_NAME'],
         Payload=json.dumps(event),
     )
-
     body = resp['Payload'].read()
 
     print('downstream response: {}'.format(body))
